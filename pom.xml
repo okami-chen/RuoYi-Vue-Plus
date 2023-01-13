@@ -331,7 +331,7 @@
         <module>ruoyi-generator</module>
         <module>ruoyi-common</module>
         <module>ruoyi-demo</module>
-        <module>ruoyi-extend</module>
+<!--        <module>ruoyi-extend</module>-->
         <module>ruoyi-oss</module>
         <module>ruoyi-sms</module>
     </modules>
