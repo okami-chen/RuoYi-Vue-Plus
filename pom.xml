@@ -320,6 +320,13 @@
                 <version>${ruoyi-vue-plus.version}</version>
             </dependency>
 
+            <!-- business模块 -->
+            <dependency>
+                <groupId>com.ruoyi</groupId>
+                <artifactId>ruoyi-business</artifactId>
+                <version>${ruoyi-vue-plus.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
