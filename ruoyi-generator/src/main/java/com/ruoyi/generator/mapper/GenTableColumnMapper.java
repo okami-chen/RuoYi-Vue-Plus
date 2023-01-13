@@ -1,5 +1,6 @@
 package com.ruoyi.generator.mapper;
 
+import com.baomidou.dynamic.datasource.annotation.DS;
 import com.baomidou.mybatisplus.annotation.InterceptorIgnore;
 import com.ruoyi.common.core.mapper.BaseMapperPlus;
 import com.ruoyi.generator.domain.GenTableColumn;

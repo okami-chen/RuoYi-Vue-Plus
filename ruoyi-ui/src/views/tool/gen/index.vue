@@ -1,13 +1,23 @@
 <template>
   <div class="app-container">
     <el-form :model="queryParams" ref="queryForm" size="small" :inline="true" v-show="showSearch" label-width="68px">
-      <el-form-item label="数据源" prop="dataName">
+      <!--el-form-item label="数据源" prop="dataName">
         <el-input
           v-model="queryParams.dataName"
           placeholder="请输入数据源名称"
           clearable
           @keyup.enter.native="handleQuery"
         />
+      </el-form-item-->
+      <el-form-item label="数据源" prop="dataName">
+        <el-select v-model="queryParams.dataName" placeholder="请选择数据源" clearable>
+          <el-option
+            v-for="dict in dict.type.datasource"
+            :key="dict.value"
+            :label="dict.label"
+            :value="dict.value"
+          />
+        </el-select>
       </el-form-item>
       <el-form-item label="表名称" prop="tableName">
         <el-input
@@ -198,6 +208,7 @@ hljs.registerLanguage("sql", require("highlight.js/lib/languages/sql"));
 export default {
   name: "Gen",
   components: { importTable },
+  dicts: ['datasource'],
   data() {
     return {
       // 遮罩层
@@ -223,7 +234,7 @@ export default {
       // 查询参数
       queryParams: {
         pageNum: 1,
-        pageSize: 10,
+        pageSize: 20,
         tableName: undefined,
         tableComment: undefined,
         dataName: "master"
