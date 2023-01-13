@@ -51,7 +51,7 @@ export default {
     // 数量限制
     limit: {
       type: Number,
-      default: 5,
+      default: 20,
     },
     // 大小限制(MB)
     fileSize: {
