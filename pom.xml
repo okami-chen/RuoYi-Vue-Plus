@@ -356,6 +356,7 @@
 <!--        <module>ruoyi-extend</module>-->
         <module>ruoyi-oss</module>
         <module>ruoyi-sms</module>
+        <module>ruoyi-business</module>
     </modules>
     <packaging>pom</packaging>
 
