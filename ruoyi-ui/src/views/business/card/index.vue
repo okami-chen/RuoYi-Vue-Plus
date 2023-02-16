@@ -1,22 +1,6 @@
 <template>
   <div class="app-container">
     <el-form :model="queryParams" ref="queryForm" size="small" :inline="true" v-show="showSearch" label-width="68px">
-      <el-form-item label="持卡" prop="name">
-        <el-input
-          v-model="queryParams.name"
-          placeholder="请输入持卡"
-          clearable
-          @keyup.enter.native="handleQuery"
-        />
-      </el-form-item>
-      <el-form-item label="名称" prop="title">
-        <el-input
-          v-model="queryParams.title"
-          placeholder="请输入名称"
-          clearable
-          @keyup.enter.native="handleQuery"
-        />
-      </el-form-item>
       <el-form-item label="银行" prop="bank">
         <el-select v-model="queryParams.bank" placeholder="请选择银行" clearable>
           <el-option
@@ -41,22 +25,6 @@
         <el-input
           v-model="queryParams.cardNo"
           placeholder="请输入卡号"
-          clearable
-          @keyup.enter.native="handleQuery"
-        />
-      </el-form-item>
-      <el-form-item label="过期时间" prop="expireAt">
-        <el-date-picker clearable
-          v-model="queryParams.expireAt"
-          type="date"
-          value-format="yyyy-MM-dd"
-          placeholder="请选择过期时间">
-        </el-date-picker>
-      </el-form-item>
-      <el-form-item label="识别码" prop="code">
-        <el-input
-          v-model="queryParams.code"
-          placeholder="请输入识别码"
           clearable
           @keyup.enter.native="handleQuery"
         />
