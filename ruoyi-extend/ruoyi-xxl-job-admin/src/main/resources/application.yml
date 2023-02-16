@@ -5,7 +5,7 @@ server:
     context-path: /xxl-job-admin
 spring:
   application:
-    name: ruoyi-xxl-job-admin
+    name: ms-xxl
   profiles:
     active: @profiles.active@
   mvc:
