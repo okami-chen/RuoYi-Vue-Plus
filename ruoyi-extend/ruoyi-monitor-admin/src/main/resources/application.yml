@@ -2,7 +2,7 @@ server:
   port: 9090
 spring:
   application:
-    name: ruoyi-monitor-admin
+    name: ms-monitor
   profiles:
     active: @profiles.active@
 
