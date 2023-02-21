@@ -15,9 +15,7 @@ import com.ruoyi.business.domain.SysCard;
 import com.ruoyi.business.mapper.SysCardMapper;
 import com.ruoyi.business.service.ISysCardService;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Collection;
+import java.util.*;
 
 /**
  * 信用卡Service业务层处理
@@ -111,6 +109,14 @@ public class SysCardServiceImpl implements ISysCardService {
         if(isValid){
             //TODO 做一些业务上的校验,判断是否需要校验
         }
-        return baseMapper.deleteBatchIds(ids) > 0;
+
+        ids.forEach((id)->{
+            SysCardBo bo = new SysCardBo();
+            bo.setId(id);
+            bo.setDeletedAt(new Date());
+            this.updateByBo(bo);
+        });
+        return true;
+        //return baseMapper.deleteBatchIds(ids) > 0;
     }
 }
