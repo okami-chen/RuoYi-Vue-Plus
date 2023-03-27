@@ -248,7 +248,7 @@ comment on column sys_menu.remark is '备注';
 insert into sys_menu values('1', '系统管理', '0', '1', 'system',           null, '', '1', '0', 'M', '0', '0', '', 'system',   'admin', now(), '', null, '系统管理目录');
 insert into sys_menu values('2', '系统监控', '0', '2', 'monitor',          null, '', '1', '0', 'M', '0', '0', '', 'monitor',  'admin', now(), '', null, '系统监控目录');
 insert into sys_menu values('3', '系统工具', '0', '3', 'tool',             null, '', '1', '0', 'M', '0', '0', '', 'tool',     'admin', now(), '', null, '系统工具目录');
-insert into sys_menu values('4', 'PLUS官网', '0', '4', 'https://gitee.com/JavaLionLi/RuoYi-Vue-Plus', null, '', '0', '0', 'M', '0', '0', '', 'guide',    'admin', now(), '', null, 'RuoYi-Vue-Plus官网地址');
+insert into sys_menu values('4', 'PLUS官网', '0', '4', 'https://gitee.com/dromara/RuoYi-Vue-Plus', null, '', '0', '0', 'M', '0', '0', '', 'guide',    'admin', now(), '', null, 'RuoYi-Vue-Plus官网地址');
 -- 二级菜单
 insert into sys_menu values('100',  '用户管理', '1',   '1', 'user',       'system/user/index',        '', '1', '0', 'C', '0', '0', 'system:user:list',        'user',          'admin', now(), '', null, '用户管理菜单');
 insert into sys_menu values('101',  '角色管理', '1',   '2', 'role',       'system/role/index',        '', '1', '0', 'C', '0', '0', 'system:role:list',        'peoples',       'admin', now(), '', null, '角色管理菜单');
@@ -954,7 +954,7 @@ comment on column sys_oss_config.domain is '自定义域名';
 comment on column sys_oss_config.is_https is '是否https（Y=是,N=否）';
 comment on column sys_oss_config.region is '域';
 comment on column sys_oss_config.access_policy is '桶权限类型(0=private 1=public 2=custom)';
-comment on column sys_oss_config.status is '状态（0=正常,1=停用）';
+comment on column sys_oss_config.status is '是否默认（0=是,1=否）';
 comment on column sys_oss_config.ext1 is '扩展字段';
 comment on column sys_oss_config.create_by is '创建者';
 comment on column sys_oss_config.create_time is '创建时间';
