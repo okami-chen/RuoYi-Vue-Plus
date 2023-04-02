@@ -1,4 +1,4 @@
-FROM nginx:1.23.3
+FROM nginx:stable
 COPY ./dist /usr/share/nginx/html
 COPY ./conf/nginx.conf /etc/nginx/nginx.conf
 
