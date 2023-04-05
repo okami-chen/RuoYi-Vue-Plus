@@ -47,9 +47,9 @@ jobs:
       - name: Build And Push
         uses: docker/build-push-action@v4
         with:
-          context: .
+          context: ruoyi-admin
           platforms: linux/amd64
           push: true
-          file: ruoyi-admin/Dockerfile
+          file: Dockerfile
           tags: |
             registry.cn-hangzhou.aliyuncs.com/okami/docker-php:${{ matrix.version }}
