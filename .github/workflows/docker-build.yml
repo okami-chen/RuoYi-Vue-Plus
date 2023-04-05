@@ -50,6 +50,6 @@ jobs:
           context: ruoyi-admin
           platforms: linux/amd64
           push: true
-          file: Dockerfile
+          file: ruoyi-admin/Dockerfile
           tags: |
             registry.cn-hangzhou.aliyuncs.com/okami/docker-php:${{ matrix.version }}
